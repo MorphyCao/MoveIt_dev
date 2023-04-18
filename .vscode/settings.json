@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/rosi/ROS2_ws/ur_ros2_driver_ws/install/ur_robot_driver/local/lib/python3.10/dist-packages",
+        "/home/rosi/ROS2_ws/ur_ros2_driver_ws/install/ur_moveit_config/local/lib/python3.10/dist-packages",
+        "/home/rosi/ROS2_ws/ur_ros2_driver_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rosi/ROS2_ws/ur_ros2_driver_ws/install/ur_robot_driver/local/lib/python3.10/dist-packages",
+        "/home/rosi/ROS2_ws/ur_ros2_driver_ws/install/ur_moveit_config/local/lib/python3.10/dist-packages",
+        "/home/rosi/ROS2_ws/ur_ros2_driver_ws/install/ur_dashboard_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

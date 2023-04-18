@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:macro name="lab_table" params="parent *origin prefix">
+    <joint name="${prefix}lab_table_base_joint" type="fixed">
+  	  <xacro:insert_block name="origin" />
+  	  <parent link="${parent}"/>
+  	  <child link="${prefix}lab_table_bottom"/>
+    </joint>
+
+    <link name="${prefix}lab_table_bottom"/>
+
+    <link name="${prefix}lab_table_top">
+  	  <visual name="${prefix}lab_table_top">
+  	    <geometry>
+          <mesh filename="package://lab_table_description/meshes/table_top.dae"/>
+  	    </geometry>
+  	  </visual>
+      <collision name="${prefix}lab_table_top">
+      	<origin xyz="0 0 -0.45"/>
+  	    <geometry>
+              <box size="1.2 1.21 0.894"/>
+            </geometry>
+  	  </collision>
+  	  
+    </link>
+
+    <joint name="${prefix}lab_table_base-top" type="fixed">
+      <origin xyz="0 0 0.9"/>
+      <parent link="${prefix}lab_table_bottom"/>
+  	  <child link="${prefix}lab_table_top"/>
+    </joint>
+  </xacro:macro>
+</robot>
