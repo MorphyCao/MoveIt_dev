@@ -6,6 +6,14 @@
    <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
    <!-- import lab table macro -->
    <xacro:include filename="$(find lab_table_description)/urdf/table_macro.xacro"/>
+   <!-- robotiq 85 2-finger gripper macro -->
+   <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_gripper.urdf.xacro" />
+
+   <!-- vg10 vacuum gripper macro -->
+   <xacro:include filename="$(find vg10_description)/urdf/vg10_macro.xacro" />
+
+   <!-- robotiq epick gripper macro -->
+   <xacro:include filename="$(find robotiq_epick_suction_gripper_description)/urdf/robotiq_epick_model.urdf.xacro" />
 
    <!-- possible 'ur_type' values: ur3, ur3e, ur5, ur5e, ur10, ur10e, ur16e -->
    <!-- the default value should raise an error in case this was called without defining the type -->
@@ -100,7 +108,7 @@
    </xacro:ur_robot>
 
   <!-- robotiq gripper link -->
-  <link name="$(arg prefix)robotiq_coupler">
+  <!-- <link name="$(arg prefix)robotiq_coupler">
     <visual>
       <geometry>
         <mesh filename="package://robotiq_85_description/meshes/visual/kinova_robotiq_coupler.dae" />
@@ -126,8 +134,13 @@
     <origin xyz="0 0 0.004" rpy="0 0 ${-pi/2.0}" />
     <parent link="$(arg prefix)tool0"/>
     <child link="$(arg prefix)robotiq_coupler"/>
-  </joint>
+  </joint> -->
     
+  <!-- robotiq epick -->
+  <xacro:epick prefix="$(arg prefix)" parent="$(arg prefix)tool0" robot_name="$(arg prefix)epick">
+    <orgin xyz="0 0 0.011" rpy="0 0 ${pi}"/>
+  </xacro:epick>
+
   <xacro:if value="$(arg sim_gazebo)">
     <!-- Gazebo plugins -->
     <gazebo reference="world">
