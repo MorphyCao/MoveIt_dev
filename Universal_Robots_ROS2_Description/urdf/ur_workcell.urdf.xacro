@@ -103,7 +103,7 @@
   <link name="$(arg prefix)robotiq_coupler">
     <visual>
       <geometry>
-        <mesh filename="package://robotiq_85_description/meshes/robotiq_85_coupler/robotiq_85_coupler.stl" />
+        <mesh filename="package://robotiq_85_description/meshes/visual/kinova_robotiq_coupler.dae" />
       </geometry>
       <material name="flat_black">
         <color rgba="0 0 0 1"/>
@@ -111,7 +111,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://robotiq_85_description/meshes/robotiq_85_coupler/robotiq_85_coupler.stl" />
+        <mesh filename="package://robotiq_85_description/meshes/collision/kinova_robotiq_coupler.stl" />
       </geometry>
     </collision>
     <inertial>
